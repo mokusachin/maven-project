@@ -17,7 +17,14 @@ pipeline {
             build job :'deploy-to-staging'
         }
         }
+    stage ('Deploy to Prod'){
+    steps{
+    build job :'deploy-to-prod'
+    echo'Deployed to Production Successfully'
     }
+    }
+    }
+
 
 
 
